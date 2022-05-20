@@ -24,11 +24,15 @@ struct NoteTakeView: View {
                 .padding()
                 .frame(width: 350, height: 50, alignment: .center)
                 .border(Color.gray)
+                .disableAutocorrection(true)
+
             
             TextEditor(text: $vm.noteVar)
                 .padding([.leading, .trailing], 4)
                 .frame(width: 350).border(Color.gray)
                 .multilineTextAlignment(.leading)
+                .disableAutocorrection(true)
+
         }
         .navigationTitle("Text Note")
         .navigationBarTitleDisplayMode(.inline)
