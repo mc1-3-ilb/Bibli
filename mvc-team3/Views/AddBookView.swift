@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AddBookView: View {
-    @StateObject var bookvm = BookFolderViewModel()
+    @ObservedObject var bookvm : BookFolderViewModel
     @State private var titleBook:String = ""
     @State private var authorBook:String = ""
     
@@ -9,22 +9,47 @@ struct AddBookView: View {
     var body: some View {
       NavigationView{
         VStack {
+            Image("bookPlaceholder")
+                .resizable()
+            //  .frame(width: <#T##CGFloat?#>, height: <#T##CGFloat?#>, alignment: <#T##Alignment#>)
+                .scaledToFit()
+                .opacity(0.4)
+        
+                .frame(width: 250, height: 214, alignment: .center)
+                .padding(.horizontal)
+            
+            Button("Change cover"){
+                print("something")
+            }
+            .frame(width: 120, height: 10, alignment: .center)
+          
+            .padding(min(.infinity, 20))
+            .foregroundColor(.white)
+            .background(Color.accentColor)
+            .cornerRadius(25)
+
+            
             HStack{
                 Text ("Book Title")
                     .frame(maxWidth: .infinity , alignment: .leading)
-                    .padding(.horizontal)
+                    .padding(.leading)
                     .padding(.bottom)
                 TextField("Add book title", text: $titleBook)
-                    .padding(.horizontal)
+                    .padding(.trailing)
                     .padding(.bottom)
+                    .disableAutocorrection(true)
                 
             }.padding(.top,25)
             HStack{
                 Text ("Book Author")
                     .frame(maxWidth: .infinity , alignment: .leading)
-                    .padding(.horizontal)
+                    .padding(.leading)
+                    
                 TextField("Add book author", text: $authorBook)
-                    .padding(.horizontal)
+                    .padding(.trailing)
+                    .disableAutocorrection(true)
+                
+                
             }.padding(.top)
             Spacer()
         }
@@ -44,7 +69,6 @@ struct AddBookView: View {
             dismiss()
         }){
             Text("Save")
-            //GIMANA CARA PAS BALIK KE MAIN SCREEN LANGSUNG REFRESH
         }
         )
       }
@@ -52,11 +76,12 @@ struct AddBookView: View {
     }
 }
 
-struct addBookView_Preview: PreviewProvider {
-    static var previews: some View {
-        AddBookView()
-    }
-}
-
-
+//struct addBookView_Preview: PreviewProvider {
+//    @StateObject var vm = BookFolderViewModel()
+//    static var previews: some View {
+//        AddBookView(bookvm: vm)
+//    }
+//}
+//
+//
 
