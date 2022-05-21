@@ -29,24 +29,25 @@ struct NoteTakeView: View {
             TextField("Your title here", text: $vm.titleVar)
                 .padding()
                 .frame(height: 50, alignment: .center)
-                .border(Color.gray)
+//                .border(Color.gray)
                 .disableAutocorrection(true)
                 
+            TextEditor(text: $vm.noteVar)
+                    .padding([.leading, .trailing], 4)
+                    .frame( height:500 , alignment: .leading)
+//                    .border(Color.gray)
+                    .multilineTextAlignment(.leading)
+                    .disableAutocorrection(true)
+                
+            }
+            Section{
                 Picker( selection: $assignNoteIndex, label:
                             Text ("Assign to")) {
                     ForEach(0..<assignNote.count) {
                         Text(self.assignNote[$0]).tag($0)
                     }
                 }
-            }
-            Section{
-                
-                TextEditor(text: $vm.noteVar)
-                    .padding([.leading, .trailing], 4)
-                    .frame( height:500 , alignment: .leading)
-                    .border(Color.gray)
-                    .multilineTextAlignment(.leading)
-                    .disableAutocorrection(true)
+
             }
         }
 

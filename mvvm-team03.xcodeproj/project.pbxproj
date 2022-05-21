@@ -10,7 +10,6 @@
 		AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E8595282BCB7000316C03 /* mvc_team3App.swift */; };
 		AA0E859A282BCB7100316C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E8599282BCB7100316C03 /* Assets.xcassets */; };
 		AA0E859D282BCB7100316C03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E859C282BCB7100316C03 /* Preview Assets.xcassets */; };
-		BD803E84282EB9E600BB1175 /* InsideBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD803E83282EB9E500BB1175 /* InsideBookView.swift */; };
 		BD803E9128300B7000BB1175 /* BookFolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */; };
 		BDE3A910283783F80096BE32 /* ImportMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3A90F283783F80096BE32 /* ImportMediaView.swift */; };
 		BDE3A9122837882E0096BE32 /* VoiceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3A9112837882E0096BE32 /* VoiceNoteView.swift */; };
@@ -43,7 +42,6 @@
 		AA0E8595282BCB7000316C03 /* mvc_team3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc_team3App.swift; sourceTree = "<group>"; };
 		AA0E8599282BCB7100316C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA0E859C282BCB7100316C03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BD803E83282EB9E500BB1175 /* InsideBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideBookView.swift; sourceTree = "<group>"; };
 		BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFolderViewModel.swift; sourceTree = "<group>"; };
 		BDE3A90F283783F80096BE32 /* ImportMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportMediaView.swift; sourceTree = "<group>"; };
 		BDE3A9112837882E0096BE32 /* VoiceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoteView.swift; sourceTree = "<group>"; };
@@ -158,15 +156,14 @@
 			isa = PBXGroup;
 			children = (
 				FBB74E4F282CE417003D9B1F /* MainScreenView.swift */,
-				BD803E83282EB9E500BB1175 /* InsideBookView.swift */,
 				FBB74E51282CE55E003D9B1F /* AddBookView.swift */,
 				FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */,
 				FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */,
 				FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */,
 				FBFC220C28362083000B6E08 /* ActionSheetView.swift */,
 				FBC64015283000DF00685A32 /* NoteTakeView.swift */,
-				FBBD36762832750100823C33 /* TakeImageView.swift */,
 				BDE3A9112837882E0096BE32 /* VoiceNoteView.swift */,
+				FBBD36762832750100823C33 /* TakeImageView.swift */,
 				BDE3A90F283783F80096BE32 /* ImportMediaView.swift */,
 				FBE6F33C28354968000D7460 /* NoteListView.swift */,
 				FBE6F33E28354986000D7460 /* NoteOpenView.swift */,
@@ -302,7 +299,6 @@
 				FBE6F334283547C7000D7460 /* Note+Extension.swift in Sources */,
 				FB380AE8282E660F00CED06B /* SecondOnBoardingView.swift in Sources */,
 				FBBD3683283275E900823C33 /* FileManager+Extensions.swift in Sources */,
-				BD803E84282EB9E600BB1175 /* InsideBookView.swift in Sources */,
 				FBBD36772832750100823C33 /* TakeImageView.swift in Sources */,
 				FBE6F33728354808000D7460 /* NoteDataModel.xcdatamodeld in Sources */,
 			);
@@ -433,13 +429,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mvc-team3/Preview Content\"";
-				DEVELOPMENT_TEAM = XNC2HL8P65;
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mvvm-team03-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Bibli;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Permission Buat akses kamera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permisi mau pake kamera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permission Buat akses album photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -467,13 +463,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mvc-team3/Preview Content\"";
-				DEVELOPMENT_TEAM = XNC2HL8P65;
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mvvm-team03-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Bibli;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Permission Buat akses kamera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permisi mau pake kamera";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permission Buat akses album photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

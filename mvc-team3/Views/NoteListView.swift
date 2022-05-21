@@ -47,7 +47,8 @@ struct NoteListView: View {
         }
         VStack{
             if (self.noteListVM.notes.count == 0){
-                Text("Add new note")
+                Text("Tap + to add new item")
+                    .foregroundColor(Color.secondary)
             } else {
             List {
                 ForEach(noteListVM.notes) { note in
@@ -75,7 +76,7 @@ struct NoteListView: View {
                                 
                             }
                         }
-                    }
+                    }.navigationTitle("")
                     
                 }.onDelete(perform: deleteNote)
                 

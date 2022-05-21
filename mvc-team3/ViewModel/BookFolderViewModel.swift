@@ -17,10 +17,14 @@ class BookFolderViewModel: ObservableObject {
     }
     
     func fetchBooks() {
+        
         let request = NSFetchRequest<BookEntity>(entityName: "BookEntity")
         
         do {
             savedEntities = try container.viewContext.fetch(request)
+            
+            print(savedEntities)
+            
         } catch let error {
             print("Error fetching. \(error)")
         }

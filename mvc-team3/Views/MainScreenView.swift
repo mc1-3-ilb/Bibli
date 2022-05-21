@@ -11,6 +11,7 @@ struct MainScreenView: View {
     @State private var showSheet: Bool = false
     @State private var buttonDisabled = false
 
+    
     let layout = [
         GridItem(.adaptive(minimum:100))
     ]
@@ -19,7 +20,6 @@ struct MainScreenView: View {
     let viewContext = NoteCoreManager.shared.persistentStoreContainer.viewContext
 
     var body: some View {
-
         NoteActionSheetView(navigationLinkNotes: $navigationLinkNotes, navigationLinkImage: $navigationLinkImage, navigationLinkImportMedia: $navigationLinkImportMedia, navigationLinkVoice: $navigationLinkVoice)
 
         VStack{
@@ -31,6 +31,7 @@ struct MainScreenView: View {
                     LazyVGrid(columns: layout, content: {
                         ForEach(vm.savedEntities) { entity in
                             NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)).environment(\.managedObjectContext, viewContext)){
+                                
                                 VStack {
                                     Image("book")
                                         .resizable()
@@ -106,7 +107,9 @@ struct MainScreenView: View {
                     Text("Add book")
                     
                 }).sheet(isPresented: $showingSheet){
-                    AddBookView()
+                    AddBookView(bookvm: vm)
+                    
+                    
                 }
             }
 
