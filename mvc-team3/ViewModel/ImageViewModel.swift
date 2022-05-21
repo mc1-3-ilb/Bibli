@@ -25,4 +25,6 @@ class ImageViewModel: ObservableObject {
             cameraError = PickerImage.CameraErrorType(error: error as! PickerImage.PickerError)
         }
     }
+    
+    //
 }

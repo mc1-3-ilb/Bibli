@@ -5,7 +5,7 @@ class BookFolderViewModel: ObservableObject {
     @Published var savedEntities: [BookEntity] = []
     
     init(){
-        container = NSPersistentContainer(name: "BookContainer")
+        container = NSPersistentContainer(name: "NoteDataModel")
         container.loadPersistentStores { (description, error) in
             if let error = error {
                 print("ERROR LOADING CORE DATA. \(error)")
