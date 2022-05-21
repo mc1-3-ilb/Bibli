@@ -46,6 +46,9 @@ struct NoteListView: View {
             EmptyView()
         }
         VStack{
+            if (self.noteListVM.notes.count == 0){
+                Text("Add new note")
+            } else {
             List {
                 ForEach(noteListVM.notes) { note in
                     NavigationLink(destination: NoteOpenView(vm: note)) {
@@ -77,6 +80,7 @@ struct NoteListView: View {
                 }.onDelete(perform: deleteNote)
                 
             }
+            }
         }
         //        .sheet(isPresented: $isPresented, onDismiss: {
         //            //dismiss
@@ -86,7 +90,11 @@ struct NoteListView: View {
         //        })
         
         //    .navigationTitle("Notes")
-        .toolbar {
+        .toolbar{
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
+            
             ToolbarItem(placement: .bottomBar) {
                 Button(action: {
                     showSheet.toggle()
@@ -128,7 +136,7 @@ struct NoteListView: View {
                 
                 
             }
-        }
+        
         
         
         
@@ -136,7 +144,7 @@ struct NoteListView: View {
    
 
 }
-
+}
 struct NoteListView_Previews: PreviewProvider {
     static var previews: some View {
         let viewContext = NoteCoreManager.shared.persistentStoreContainer.viewContext

@@ -9,12 +9,13 @@ struct MainScreenView: View {
     @State private var navigationLinkImportMedia: Bool = false
     @State private var navigationLinkVoice: Bool = false
     @State private var showSheet: Bool = false
-    //contoh dulu
-    var data: Int = 1
-    //------
+    @State private var buttonDisabled = false
+
     let layout = [
         GridItem(.adaptive(minimum:100))
     ]
+    
+
     let viewContext = NoteCoreManager.shared.persistentStoreContainer.viewContext
 
     var body: some View {
@@ -22,14 +23,14 @@ struct MainScreenView: View {
         NoteActionSheetView(navigationLinkNotes: $navigationLinkNotes, navigationLinkImage: $navigationLinkImage, navigationLinkImportMedia: $navigationLinkImportMedia, navigationLinkVoice: $navigationLinkVoice)
 
         VStack{
-            if(data==0){
+            if(self.vm.savedEntities.count == 0){
                 Text("Tap + to add new book")
             }
             else {
                 ScrollView(.vertical){
                     LazyVGrid(columns: layout, content: {
                         ForEach(vm.savedEntities) { entity in
-                            NavigationLink(destination: InsideBookView()){
+                            NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)).environment(\.managedObjectContext, viewContext)){
                                 VStack {
                                     Image("book")
                                         .resizable()
@@ -37,9 +38,11 @@ struct MainScreenView: View {
                                     Text(entity.titleBook ?? "-").bold().foregroundColor(.black)
                                         .font(.caption)
                                         .padding(.horizontal)
+                                        .disableAutocorrection(true)
                                     Text(entity.authorBook ??
                                         "-").foregroundColor(.secondary).font(.caption2)
                                         .padding(.bottom)
+                                        .disableAutocorrection(true)
                                 }
                             }
                         }
@@ -53,12 +56,12 @@ struct MainScreenView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
             trailing:
-                Button("Edit") {
-                    print("Edit")
-                }
+               EditButton()
             )
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
+        
+            
                 Button(action: {
                     showSheet.toggle()
                     
@@ -66,6 +69,7 @@ struct MainScreenView: View {
                     Image(systemName: "plus.circle.fill")
                     Text("New item")
                 })
+                .disabled((self.vm.savedEntities.count > 0 ) ? false: true)
                 .actionSheet(isPresented: $showSheet) {
                     ActionSheet(
                         title: Text("Choose notes type"),
@@ -91,8 +95,8 @@ struct MainScreenView: View {
                         ]
                     )
                 }
-            }
             
+            }
             ToolbarItem(placement: .bottomBar) {
                 Button(action: {
                     showingSheet.toggle()

@@ -12,28 +12,44 @@ struct NoteTakeView: View {
     @Environment(\.dismiss) var dismiss
     @State private var noteTitle = ""
     @ObservedObject var vm: TakeNoteViewModel
+    @State private var assignNoteIndex = 0
+    var assignNote = ["Book1","Book2", "Book3"]
     
     init(vm: TakeNoteViewModel){
         self.vm = vm
     }
     
+    
+    
     var body: some View {
-
-        VStack{
+        Form{
+            Section {
+              
+            
             TextField("Your title here", text: $vm.titleVar)
                 .padding()
-                .frame(width: 350, height: 50, alignment: .center)
+                .frame(height: 50, alignment: .center)
                 .border(Color.gray)
                 .disableAutocorrection(true)
-
-            
-            TextEditor(text: $vm.noteVar)
-                .padding([.leading, .trailing], 4)
-                .frame(width: 350).border(Color.gray)
-                .multilineTextAlignment(.leading)
-                .disableAutocorrection(true)
-
+                
+                Picker( selection: $assignNoteIndex, label:
+                            Text ("Assign to")) {
+                    ForEach(0..<assignNote.count) {
+                        Text(self.assignNote[$0]).tag($0)
+                    }
+                }
+            }
+            Section{
+                
+                TextEditor(text: $vm.noteVar)
+                    .padding([.leading, .trailing], 4)
+                    .frame( height:500 , alignment: .leading)
+                    .border(Color.gray)
+                    .multilineTextAlignment(.leading)
+                    .disableAutocorrection(true)
+            }
         }
+
         .navigationTitle("Text Note")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(
@@ -43,12 +59,12 @@ struct NoteTakeView: View {
                 Text("Cancel")
             },
             trailing: Button(action:{
-            vm.save()
-            presentationMode.wrappedValue.dismiss()
-        })
-        {
-            Text("Save")
-        }
+                vm.save()
+                presentationMode.wrappedValue.dismiss()
+            })
+            {
+                Text("Save")
+            }
         )
         .navigationBarBackButtonHidden(true)
         
