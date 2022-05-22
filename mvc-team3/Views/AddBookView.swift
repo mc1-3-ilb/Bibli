@@ -11,10 +11,9 @@ struct AddBookView: View {
         VStack {
             Image("bookPlaceholder")
                 .resizable()
-            //  .frame(width: <#T##CGFloat?#>, height: <#T##CGFloat?#>, alignment: <#T##Alignment#>)
                 .scaledToFit()
-                .opacity(0.4)
-        
+                .padding()
+
                 .frame(width: 250, height: 214, alignment: .center)
                 .padding(.horizontal)
             

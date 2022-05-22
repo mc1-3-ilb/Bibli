@@ -72,18 +72,18 @@ struct SecondOnBoardingView: View {
                         .padding(.trailing,15)
                 }
             }.frame(width: 385, alignment: .center)
-             .padding(.bottom,100)
+             .padding(.bottom,130)
             
             NavigationLink(destination: MainScreenView()){
                 Text("Continue")
             }
             .font(.title2)
-            .frame(width: 250, height: 25, alignment: .center)
-            .padding(min(.infinity, 20))
+            .frame(width: 300, height: 25, alignment: .center)
+            .padding(min(.infinity, 15))
             .foregroundColor(.white)
             .background(Color("AccentColor"))
             .cornerRadius(10)
-            .padding(.bottom,180)
+            .padding(.bottom,200)
         
         }
     }

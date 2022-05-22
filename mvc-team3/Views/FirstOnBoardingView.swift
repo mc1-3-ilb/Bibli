@@ -27,12 +27,12 @@ struct FirstOnBoardingView: View {
                     Text("Get Started")
                 }
                 .font(.title2)
-                .frame(width: 250, height: 25, alignment: .center)
-                .padding(min(.infinity, 20))
+                .frame(width: 300, height: 25, alignment: .center)
+                .padding(min(.infinity, 15))
                 .foregroundColor(.white)
                 .background(Color("AccentColor"))
                 .cornerRadius(10)
-                .padding(.top,75)
+                .padding(.top, 75)
                 
                 Spacer()
               
