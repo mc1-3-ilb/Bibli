@@ -30,7 +30,7 @@ struct MainScreenView: View {
                 ScrollView(.vertical){
                     LazyVGrid(columns: layout, content: {
                         ForEach(vm.savedEntities) { entity in
-                            NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)).environment(\.managedObjectContext, viewContext)){
+                            NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext), bookvm: vm).environment(\.managedObjectContext, viewContext)){
                                 
                                 VStack {
                                     Image("book")
@@ -61,8 +61,6 @@ struct MainScreenView: View {
             )
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-        
-            
                 Button(action: {
                     showSheet.toggle()
                     
