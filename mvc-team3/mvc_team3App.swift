@@ -9,6 +9,16 @@ import SwiftUI
 
 @main
 struct mvc_team3App: App {
+//    @State private var isFirst: Bool = true
+//    var body: some Scene {
+//        WindowGroup {
+//            if (isFirst==false) {
+//                FirstOnBoardingView(isFirst: $isFirst)
+//            }else{
+//                MainScreenView()
+//            }
+//        }
+//    }
     var body: some Scene {
         WindowGroup {
             FirstOnBoardingView()

@@ -10,6 +10,8 @@
 		AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E8595282BCB7000316C03 /* mvc_team3App.swift */; };
 		AA0E859A282BCB7100316C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E8599282BCB7100316C03 /* Assets.xcassets */; };
 		AA0E859D282BCB7100316C03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E859C282BCB7100316C03 /* Preview Assets.xcassets */; };
+		BD3815D82839BC9B00A34797 /* timeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3815D72839BC9B00A34797 /* timeConverter.swift */; };
+		BD3815DA2839BCEB00A34797 /* VoiceNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3815D92839BCEB00A34797 /* VoiceNoteViewModel.swift */; };
 		BD803E9128300B7000BB1175 /* BookFolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */; };
 		BDE3A910283783F80096BE32 /* ImportMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3A90F283783F80096BE32 /* ImportMediaView.swift */; };
 		BDE3A9122837882E0096BE32 /* VoiceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3A9112837882E0096BE32 /* VoiceNoteView.swift */; };
@@ -42,6 +44,8 @@
 		AA0E8595282BCB7000316C03 /* mvc_team3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc_team3App.swift; sourceTree = "<group>"; };
 		AA0E8599282BCB7100316C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA0E859C282BCB7100316C03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD3815D72839BC9B00A34797 /* timeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeConverter.swift; sourceTree = "<group>"; };
+		BD3815D92839BCEB00A34797 /* VoiceNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoteViewModel.swift; sourceTree = "<group>"; };
 		BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFolderViewModel.swift; sourceTree = "<group>"; };
 		BDE3A90F283783F80096BE32 /* ImportMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportMediaView.swift; sourceTree = "<group>"; };
 		BDE3A9112837882E0096BE32 /* VoiceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoteView.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			children = (
 				BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */,
 				FBBD36782832752000823C33 /* ImageViewModel.swift */,
+				BD3815D92839BCEB00A34797 /* VoiceNoteViewModel.swift */,
 				FBE6F33828354859000D7460 /* NoteListViewModel.swift */,
 				FBE6F33A2835488C000D7460 /* TakeNoteViewModel.swift */,
 			);
@@ -156,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				FBB74E4F282CE417003D9B1F /* MainScreenView.swift */,
+				FBE6F33C28354968000D7460 /* NoteListView.swift */,
 				FBB74E51282CE55E003D9B1F /* AddBookView.swift */,
-				FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */,
 				FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */,
 				FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */,
 				FBFC220C28362083000B6E08 /* ActionSheetView.swift */,
@@ -165,8 +170,8 @@
 				BDE3A9112837882E0096BE32 /* VoiceNoteView.swift */,
 				FBBD36762832750100823C33 /* TakeImageView.swift */,
 				BDE3A90F283783F80096BE32 /* ImportMediaView.swift */,
-				FBE6F33C28354968000D7460 /* NoteListView.swift */,
 				FBE6F33E28354986000D7460 /* NoteOpenView.swift */,
+				FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBD3682283275E900823C33 /* FileManager+Extensions.swift */,
+				BD3815D72839BC9B00A34797 /* timeConverter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,9 +296,11 @@
 				FBBD3680283275B000823C33 /* ZoomableScrollvIEW.swift in Sources */,
 				FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */,
 				FBFC220D28362083000B6E08 /* ActionSheetView.swift in Sources */,
+				BD3815DA2839BCEB00A34797 /* VoiceNoteViewModel.swift in Sources */,
 				FBBD367E2832759100823C33 /* ImagePickerVC.swift in Sources */,
 				FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */,
 				FBBD36792832752000823C33 /* ImageViewModel.swift in Sources */,
+				BD3815D82839BC9B00A34797 /* timeConverter.swift in Sources */,
 				BD803E9128300B7000BB1175 /* BookFolderViewModel.swift in Sources */,
 				FBE6F32F2835473B000D7460 /* BaseModel.swift in Sources */,
 				FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */,
