@@ -35,6 +35,7 @@
 		FBE6F33D28354968000D7460 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33C28354968000D7460 /* NoteListView.swift */; };
 		FBE6F33F28354986000D7460 /* NoteOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33E28354986000D7460 /* NoteOpenView.swift */; };
 		FBFC220D28362083000B6E08 /* ActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC220C28362083000B6E08 /* ActionSheetView.swift */; };
+		FBFDE5D72839F534002D9D64 /* NewFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDE5D62839F534002D9D64 /* NewFolderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		FBE6F33C28354968000D7460 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		FBE6F33E28354986000D7460 /* NoteOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteOpenView.swift; sourceTree = "<group>"; };
 		FBFC220C28362083000B6E08 /* ActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetView.swift; sourceTree = "<group>"; };
+		FBFDE5D62839F534002D9D64 /* NewFolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				BDE3A90F283783F80096BE32 /* ImportMediaView.swift */,
 				FBE6F33C28354968000D7460 /* NoteListView.swift */,
 				FBE6F33E28354986000D7460 /* NoteOpenView.swift */,
+				FBFDE5D62839F534002D9D64 /* NewFolderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				BDE3A9122837882E0096BE32 /* VoiceNoteView.swift in Sources */,
 				BDE3A910283783F80096BE32 /* ImportMediaView.swift in Sources */,
 				FBC64016283000DF00685A32 /* NoteTakeView.swift in Sources */,
+				FBFDE5D72839F534002D9D64 /* NewFolderView.swift in Sources */,
 				FB9289F728372C7500B7C383 /* TimeFormatting.swift in Sources */,
 				FBE6F33928354859000D7460 /* NoteListViewModel.swift in Sources */,
 				FBE6F33F28354986000D7460 /* NoteOpenView.swift in Sources */,

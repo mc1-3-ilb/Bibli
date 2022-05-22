@@ -27,12 +27,12 @@ struct NoteOpenView: View {
                         
                             Text(note.noteTitle)
                                 .bold()
-                                .padding(.horizontal)
+//                                .padding(.horizontal)
                                 .frame( alignment: .leading)
                                 .border(.background)
                         
                             Text(note.noteText)
-                                .padding()
+//                                .padding()
                                 .frame( alignment: .leading)
                         
                        
@@ -45,6 +45,8 @@ struct NoteOpenView: View {
                             print("Edited")
                         }
                 )
+                .navigationTitle("Note")
+                .navigationBarTitleDisplayMode(.inline)
                 
             }
         }

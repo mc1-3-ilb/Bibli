@@ -27,10 +27,11 @@ struct NoteTakeView: View {
               
             
             TextField("Your title here", text: $vm.titleVar)
-                .padding()
+ //               .padding()
                 .frame(height: 50, alignment: .center)
 //                .border(Color.gray)
                 .disableAutocorrection(true)
+                
                 
             TextEditor(text: $vm.noteVar)
                     .padding([.leading, .trailing], 4)
