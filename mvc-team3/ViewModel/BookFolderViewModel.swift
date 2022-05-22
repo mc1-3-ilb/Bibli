@@ -46,3 +46,28 @@ class BookFolderViewModel: ObservableObject {
         }
     }
 }
+
+//class BookModel: Identifiable, ObservableObject {
+//    
+//    private var book: BookEntity
+//    
+//    init (book : BookEntity) {
+//        self.book = book
+//    }
+//    
+////    var id: NSManagedObjectID {
+////        book.objectID
+////    }
+//    var titleBook: String{
+//        book.titleBook ?? ""
+//        
+//    }
+//    var authorBook: String {
+//        book.authorBook ?? ""
+//    }
+//    
+//    var coverBook: String {
+//        book.coverBook ?? ""
+//        
+//    }
+//}
